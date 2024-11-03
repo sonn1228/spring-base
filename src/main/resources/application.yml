@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  main:
+    banner-mode: "off"
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/qlbh
+    username: root
+    password: 281204
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  SECRET_KEY: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  EXPIRATION_TIME: 3600000
+  EXPIRATION_TIME_REMEMBER_ME: 3600000
