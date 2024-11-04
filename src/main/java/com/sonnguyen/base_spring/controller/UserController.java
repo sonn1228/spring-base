@@ -35,9 +35,9 @@ public class UserController {
     public User createUser(@RequestBody User user) {
         return userService.saveUser(user); // Tạo người dùng mới
     }
-
+//  RequestBody nhan objcet dang json
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
         userService.deleteUser(id); // Xóa người dùng theo ID
         return ResponseEntity.noContent().build();
     }
